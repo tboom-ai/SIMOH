@@ -8,10 +8,10 @@ from screeninfo import get_monitors
 from E1_robot_path import simulate_robot_path
 
 # Constants 
-BIM_FILE = 'S.I.M.O.H./assets/BIM.json' 
+BIM_FILE = 'assets/BIM.json' 
 
 # Load trained YOLO model
-model = YOLO('S.I.M.O.H./assets/best_helmet.pt')  # Path to the trained model
+model = YOLO('assets/best_helmet.pt')  # Path to the trained model
 
 # Window name
 WINDOW_NAME = "Hazard Detection S.I.M.O.H."
@@ -117,7 +117,7 @@ def detect_hazards(frame, model, detected_hazards):
         conf = 0.6,
         persist = True,
         save = False,
-        tracker = 'S.I.M.O.H./assets/bytetrack_helmet.yaml',
+        tracker = 'assets/bytetrack_helmet.yaml',
         verbose = False
     )
 
