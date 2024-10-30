@@ -476,8 +476,10 @@
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
         "risk_factor": 0.06,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 1,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-10-30 15:07:50"
+        ]
     },
     "BG.Oost.17": {
         "boundary": [

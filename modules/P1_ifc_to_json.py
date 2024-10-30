@@ -37,7 +37,7 @@ for i, boundary in enumerate(coordinates):
     zones[zone_name] = {
         "boundary": boundary,
         "location": [x_center, y_center],  # Set the location to the middle of the bounding box
-        "floorplan": "SIMOH/assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry" if i % 2 == 0 else "Brick laying",  
         "required_PPE": "Helmet, Safety Shoes" if i % 2 == 0 else "Helmet",
         "risk_factor": round(random.uniform(0.05, 0.20), 2),
@@ -46,7 +46,7 @@ for i, boundary in enumerate(coordinates):
     }
 
 # Save the JSON to a file
-output_json_file = 'SIMOH/assets/BIM.json'
+output_json_file = 'assets/BIM.json'
 with open(output_json_file, 'w') as file:
     json.dump(zones, file, indent=4)
 

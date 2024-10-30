@@ -72,7 +72,7 @@ def main():
     """Main function to visualize zones and robot path."""
 
     # Path to the JSON file containing zone information
-    BIM_DATA = 'SIMOH/assets/BIM.json'  # Update this path if necessary
+    BIM_DATA = 'assets/BIM.json'  # Update this path if necessary
 
     # Load zone data
     zones = load_json(BIM_DATA)
@@ -98,6 +98,10 @@ def main():
 
     # Show the plot
     plt.show()
+
+    # Destroy the plot after displaying
+    plt.close(fig)
+
 
 if __name__ == "__main__":
     main()

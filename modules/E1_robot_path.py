@@ -7,7 +7,7 @@ def simulate_robot_path(step=5):
     Output: list: The next point on the path [x, y, z]"""
     
     # Open the json where the calculated path is stored and extract the dataset_points
-    with open("SIMOH/assets/path.json", "r") as file:
+    with open("assets/path.json", "r") as file:
         dataset_points = json.load(file)
 
     # Loop over each path in dataset_points
