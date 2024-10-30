@@ -22,10 +22,10 @@
             351.534157,
             829.0930445
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.2,
+        "risk_factor": 0.18,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -52,10 +52,10 @@
             812.049308,
             811.3809235
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.12,
+        "risk_factor": 0.08,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -82,10 +82,10 @@
             1259.772372,
             747.420486
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.09,
+        "risk_factor": 0.07,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -112,10 +112,10 @@
             1576.6225405,
             747.420486
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.16,
+        "risk_factor": 0.13,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -142,10 +142,10 @@
             1895.4407225,
             747.420486
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.17,
+        "risk_factor": 0.19,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -172,10 +172,10 @@
             2214.2589040000003,
             747.420486
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.06,
+        "risk_factor": 0.16,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -202,10 +202,10 @@
             2493.716817,
             747.420486
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.13,
+        "risk_factor": 0.16,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -232,10 +232,10 @@
             2780.0627759999998,
             684.4440549999999
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.07,
+        "risk_factor": 0.13,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -262,10 +262,10 @@
             2825.703263,
             977.9338304999999
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.07,
+        "risk_factor": 0.16,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -292,7 +292,7 @@
             2825.703263,
             1247.0792075
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
         "risk_factor": 0.16,
@@ -322,10 +322,10 @@
             1168.2597460000002,
             1031.798432
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.14,
+        "risk_factor": 0.18,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -352,10 +352,10 @@
             1317.8287695,
             992.4381625000001
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.06,
+        "risk_factor": 0.05,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -382,10 +382,10 @@
             1573.6705204999998,
             1403.7529775
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.13,
+        "risk_factor": 0.1,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -412,10 +412,10 @@
             2179.8186685,
             1393.9204645
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.19,
+        "risk_factor": 0.18,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -442,10 +442,10 @@
             2780.0627759999998,
             1733.779102
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.11,
+        "risk_factor": 0.16,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -472,14 +472,12 @@
             680.52204925,
             1568.725146
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
         "risk_factor": 0.06,
-        "amount_of_hazards": 1,
-        "hazard_type": [
-            "WARNING: Person without helmet detected, ID: 1, at 2024-10-30 15:07:50"
-        ]
+        "amount_of_hazards": 0,
+        "hazard_type": []
     },
     "BG.Oost.17": {
         "boundary": [
@@ -504,10 +502,10 @@
             823.2030257499999,
             1668.448409
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.06,
+        "risk_factor": 0.05,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -534,10 +532,10 @@
             532.9862410000001,
             1524.7651449999998
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Brick laying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.14,
+        "risk_factor": 0.2,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -564,10 +562,10 @@
             600.822089,
             1427.70770075
         ],
-        "floorplan": "S.I.M.O.H./assets/construction_site_bk.jpg",
+        "floorplan": "assets/construction_site_bk.jpg",
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.08,
+        "risk_factor": 0.12,
         "amount_of_hazards": 0,
         "hazard_type": []
     }
