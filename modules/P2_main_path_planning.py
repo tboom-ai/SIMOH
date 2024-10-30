@@ -94,9 +94,9 @@ class NetworkPlanner:
         # Store the smoothed path
         self.smoothed_paths.append(smoothed_path)
         print()
-        print("------------------------------------")
+        print("--------------------------------------------")
         print("Path section found, close window to continue")
-        print("------------------------------------")
+        print("--------------------------------------------")
         print()
 
         # Plot the result

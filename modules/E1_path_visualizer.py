@@ -102,6 +102,5 @@ def main():
     # Destroy the plot after displaying
     plt.close(fig)
 
-
 if __name__ == "__main__":
     main()
