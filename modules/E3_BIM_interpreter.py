@@ -8,7 +8,7 @@ import matplotlib as mpl
 class ConstructionHazardVisualizer:
     # Determine hazard visualization, load zone data & set up the plot
     def __init__(self):
-        self.json_file = "S.I.M.O.H./assets/BIM.json" 
+        self.json_file = "SIMOH/assets/BIM.json" 
         self.zone_data = self.load_zone_data()
         self.max_hazards = self.get_max_hazards()
         self.fig, self.ax1 = plt.subplots(1, 1, figsize=(12, 6))  #

@@ -118,7 +118,7 @@ class NetworkPlanner:
                 self.run_lower_level_network(shortest_path, source_location, target_location)
 
 # Create an instance of NetworkPlanner
-planner = NetworkPlanner('S.I.M.O.H./assets/BIM.json')
+planner = NetworkPlanner('SIMOH/assets/BIM.json')
     
 # Run the planner
 planner.run()
@@ -133,5 +133,5 @@ print("----------------------------------------------------------")
 print("Full path is planned, Press 'Start' to activate S.I.M.O.H.")
 print("----------------------------------------------------------")
 
-with open("S.I.M.O.H./assets/path.json", "w") as file:
+with open("SIMOH/assets/path.json", "w") as file:
     json.dump(smoothed_paths, file)
