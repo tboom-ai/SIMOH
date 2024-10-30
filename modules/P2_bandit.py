@@ -63,7 +63,7 @@ class BanditEnv(gym.Env):
 class CustomBanditzones(BanditEnv):
     def __init__(self):
         # Load the zone_id data and store it as an instance variable
-        with open("S.I.M.O.H./assets/BIM.json", "r") as file:
+        with open("SIMOH/assets/BIM.json", "r") as file:
             self.zone_id = json.load(file)  # Instance variable
                 
         self.zone_names = list(self.zone_id.keys())  # Store zone names
