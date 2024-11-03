@@ -25,21 +25,54 @@ coordinates = [
     [[547.61745,1443.675453], [597.534284,1372.255982], [654.026728,1411.739949], [604.109894,1483.159419]]
 ]
 
+custom_zone_names = {
+    0: "Berlage",
+    3: "Room R",
+    5: "Room D",
+    7: "Room B",
+    8: "Room Q",
+    9: "Room P",
+    12: "BK Expo",
+    13: "Orange Hall",
+    15: "Bouwpub"
+}
+
+act_options = [
+    "Bricklaying",
+    "Carpentry",
+    "Welding"
+]
+
+ppe_options = [
+    "Helmet",
+    "Helmet, Safety Shoes",
+    "Helmet, Safety Goggles",
+    "Helmet, Mouthguard"
+]
+
+
+
 # Create the JSON structure
 zones = {}
 for i, boundary in enumerate(coordinates):
-    zone_name = f"BG.Oost.{i + 1}"
+# Check if there is a custom name for the current room (by index)
+    if i in custom_zone_names:
+        zone_name = custom_zone_names[i]
+    else:
+        zone_name = f"BG.Oost.{i + 1}"  # Default name if no custom name is specified
 
     # Calculate the approximate center location
     x_center = sum(point[0] for point in boundary) / len(boundary)
     y_center = sum(point[1] for point in boundary) / len(boundary)
     
+    zone_activity = random.choice(act_options)
+    required_ppe = random.choice(ppe_options)
+
     zones[zone_name] = {
         "boundary": boundary,
         "location": [x_center, y_center],  # Set the location to the middle of the bounding box
-        "floorplan": "assets/construction_site_bk.jpg",
-        "zone_activity": "Carpentry" if i % 2 == 0 else "Brick laying",  
-        "required_PPE": "Helmet, Safety Shoes" if i % 2 == 0 else "Helmet",
+        "zone_activity": zone_activity,  
+        "required_PPE": required_ppe,
         "risk_factor": round(random.uniform(0.05, 0.20), 2),
         "amount_of_hazards": 0,
         "hazard_type": []

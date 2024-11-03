@@ -1,22 +1,26 @@
 import json
-import cv2
 import matplotlib.pyplot as plt
+from matplotlib.patches import Polygon
 import numpy as np
 import matplotlib as mpl
 
-# Heatmap with amount of hazards per zone
-class ConstructionHazardVisualizer:
-    # Determine hazard visualization, load zone data & set up the plot
+class BIMinterpreter:
+    # Initialize zone data & set up the plot
     def __init__(self):
         self.json_file = "assets/BIM.json" 
+        self.wall_coordinates = self.load_wall_data()
         self.zone_data = self.load_zone_data()
         self.max_hazards = self.get_max_hazards()
-        self.fig, self.ax1 = plt.subplots(1, 1, figsize=(12, 6))  #
+        self.fig, self.ax1 = plt.subplots(1, 1, figsize=(10, 5)) 
         self.ax_text = None 
-        self.construction_site = self.load_image()
         self.cid = None
 
-    # Load zone data from the JSON file
+    # Load walls 
+    def load_wall_data(self):
+        import P1_BIM as BIM
+        return BIM.plan
+
+    # Load zones
     def load_zone_data(self):
         with open(self.json_file, 'r') as f:
             return json.load(f)
@@ -24,13 +28,6 @@ class ConstructionHazardVisualizer:
     # Get the max. number of hazards to scale the colors
     def get_max_hazards(self):
         return max(round(info['amount_of_hazards']) for info in self.zone_data.values())
-
-    # Load the image using the floorplan path from the JSON
-    def load_image(self):
-        first_zone = list(self.zone_data.values())[0]  # Get the first zone's data
-        construction_site = first_zone["floorplan"]  # Extract the floorplan path from the JSON
-        img = cv2.imread(construction_site)
-        return cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     # Generate shades of color based on hazard count
     def get_red_color(self, hazard_count):
@@ -42,10 +39,9 @@ class ConstructionHazardVisualizer:
 
     # Display a text message under the image
     def display_message(self, zone_name, helmet_hazard_count):
-        
         if self.ax_text:
             self.ax_text.remove()  # Remove the old text
-        
+
         # Create the new message based on helmet_hazard_count
         if helmet_hazard_count == 0:
             message = f'No persons without helmets detected in {zone_name}.'
@@ -71,12 +67,39 @@ class ConstructionHazardVisualizer:
                     # Display message based on the hazard count
                     self.display_message(zone_name, helmet_hazard_count)
 
+    # Plot walls using boundary points
+    def plot_walls(self):
+        for wall in self.wall_coordinates:
+            # Extract x and y coordinates
+            polygon = Polygon(wall, closed=True, color='darkgrey')
+            self.ax1.add_patch(polygon)
+
+    # Plot zones and hazards
+    def plot_zones(self):
+        for zone_name, zone_info in self.zone_data.items():
+            boundary_points = zone_info.get('boundary', [])
+            if not boundary_points:
+                continue
+
+            # Create a polygon for the zone
+            polygon = Polygon(boundary_points, color='lightgrey', closed=True, fill=True, alpha=0.3)
+            self.ax1.add_patch(polygon)
+
+            # Calculate the center for placing the text
+            xs, ys = zip(*boundary_points)
+            centroid_x = sum(xs) / len(xs)
+            centroid_y = sum(ys) / len(ys)
+
+            # Add the label to the plot
+            self.ax1.text(centroid_x, centroid_y-60, f'{zone_name}', horizontalalignment='center', verticalalignment='center', fontsize=8)
+
     # Draw the initial visualizations
     def draw(self):
-        # Subplot 1: Heatmap on construction site plan
-        self.ax1.imshow(self.construction_site)
+        # Subplot 1: Walls and zones
+        self.plot_walls()  # Plot the walls
+        self.plot_zones()  # Plot the zones
 
-        # Plot the heatmap markers
+        # Plot hazard markers
         for zone, info in self.zone_data.items():
             x, y = info['location']
             hazards = round(info['amount_of_hazards'])
@@ -88,7 +111,6 @@ class ConstructionHazardVisualizer:
 
             # Plot the black dot and add text labels
             self.ax1.scatter(x, y, s=30, c='black')
-            self.ax1.text(x + 40, y + 40, f'{zone}', color='black', fontsize=10, ha='center')
 
         # Create the color legend for the heatmap
         cmap = mpl.colors.LinearSegmentedColormap.from_list("", ["lightcoral", "darkred"])
@@ -106,20 +128,15 @@ class ConstructionHazardVisualizer:
         cbar.set_label('Amount of Hazards', fontsize=10, rotation=90, labelpad=1)
         cbar.ax.yaxis.set_label_position('left')
 
-        cbar.set_label('Amount of Hazards', fontsize=10, rotation=90, labelpad=1)
-        cbar.ax.yaxis.set_label_position('left')
-
-        self.ax1.set_title('Amount of Hazards per Zone')
+        self.ax1.set_title('Hazard Heatmap per Zone')
         self.ax1.axis('off')
-
-        # Invert the y axis to match coordiante system
-        # self.ax1.invert_yaxis()
 
         # Connect the click event to the heatmap
         self.cid = self.fig.canvas.mpl_connect('button_press_event', self.on_click)
 
         # Avoid overlapping and ensure equal sizing
         plt.subplots_adjust(left=0.05, right=0.95, wspace=0.3)
+
         plt.show()
 
     # Disconnect the click event if needed
@@ -130,5 +147,5 @@ class ConstructionHazardVisualizer:
 
 # Check the script and create heatmap
 if __name__ == "__main__":
-    visualizer = ConstructionHazardVisualizer()
+    visualizer = BIMinterpreter()
     visualizer.draw()

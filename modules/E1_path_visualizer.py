@@ -58,7 +58,7 @@ def plot_walls(ax, wall_coordinates, color='lightgrey', alpha=0.8):
         ax.add_patch(polygon)
 
 def plot_robot_path(ax, path, color='blue', linewidth=2, label='Robot Path'):
-    """Plot the robot path on the given and transform the y axis."""
+    """Plot the robot path on the given axis."""
 
     # Extract x and y coordinates, adjusting y to account for image coordinate inversion
     x_coords = [position[0] for position in path]
