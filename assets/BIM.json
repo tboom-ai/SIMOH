@@ -465,10 +465,11 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.11,
-        "amount_of_hazards": 2,
+        "amount_of_hazards": 3,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:07",
-            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:07"
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:07",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:20:05"
         ]
     },
     "BG.Oost.17": {

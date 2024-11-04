@@ -313,6 +313,7 @@ def main(position_queue):
     print("-----------------------------------")
     print("S.I.M.O.H. finished it's cycle")
     print("Detected hazards are logged to BIM")
+    print("Click 'Show Heatmap' for results")
     print("Charging...")
     print("-----------------------------------")
     print()
