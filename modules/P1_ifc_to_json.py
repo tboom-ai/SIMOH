@@ -43,15 +43,6 @@ act_options = [
     "Welding"
 ]
 
-ppe_options = [
-    "Helmet",
-    "Helmet, Safety Shoes",
-    "Helmet, Safety Goggles",
-    "Helmet, Mouthguard"
-]
-
-
-
 # Create the JSON structure
 zones = {}
 for i, boundary in enumerate(coordinates):
@@ -66,13 +57,12 @@ for i, boundary in enumerate(coordinates):
     y_center = sum(point[1] for point in boundary) / len(boundary)
     
     zone_activity = random.choice(act_options)
-    required_ppe = random.choice(ppe_options)
 
     zones[zone_name] = {
         "boundary": boundary,
         "location": [x_center, y_center],  # Set the location to the middle of the bounding box
         "zone_activity": zone_activity,  
-        "required_PPE": required_ppe,
+        "required_PPE": "Helmet",
         "risk_factor": round(random.uniform(0.05, 0.20), 2),
         "amount_of_hazards": 0,
         "hazard_type": []

@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from matplotlib.path import Path
 from screeninfo import get_monitors
+from multiprocessing import Queue
 # Import from other scripts
 from E1_robot_path import simulate_robot_path
 
@@ -219,7 +220,7 @@ def setup_window(frame):
     cv2.imshow(WINDOW_NAME, resized_frame)
 
 # MAIN LOOP
-def main():
+def main(position_queue):
     """Main loop to perform hazard detection based on simulated robot position."""
 
     # Initialize the camera 
@@ -241,6 +242,9 @@ def main():
     robot_positions = simulate_robot_path()
 
     for robot_pose in robot_positions:
+        # Put the currunt robot position into the queue for path_visualizer.py
+        position_queue.put(robot_pose)
+
         # Store previous hazard detection status
         prev_hazard_detection_active = hazard_detection_active
 
@@ -314,6 +318,5 @@ def main():
     print()
 
 if __name__ == "__main__":
-    main()
-
-    
+    position_queue = Queue()
+    main(position_queue)

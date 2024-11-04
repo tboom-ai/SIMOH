@@ -24,7 +24,7 @@
         ],
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.08,
+        "risk_factor": 0.06,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -51,9 +51,9 @@
             812.049308,
             811.3809235
         ],
-        "zone_activity": "Welding",
-        "required_PPE": "Helmet, Safety Goggles",
-        "risk_factor": 0.07,
+        "zone_activity": "Bricklaying",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.14,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -80,9 +80,9 @@
             1259.772372,
             747.420486
         ],
-        "zone_activity": "Welding",
+        "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
-        "risk_factor": 0.14,
+        "risk_factor": 0.12,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -109,11 +109,13 @@
             1576.6225405,
             747.420486
         ],
-        "zone_activity": "Carpentry",
-        "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.09,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.07,
+        "amount_of_hazards": 1,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:43"
+        ]
     },
     "BG.Oost.5": {
         "boundary": [
@@ -140,7 +142,7 @@
         ],
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.17,
+        "risk_factor": 0.13,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -167,9 +169,9 @@
             2214.2589040000003,
             747.420486
         ],
-        "zone_activity": "Carpentry",
-        "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.12,
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.16,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -196,9 +198,9 @@
             2493.716817,
             747.420486
         ],
-        "zone_activity": "Bricklaying",
+        "zone_activity": "Welding",
         "required_PPE": "Helmet",
-        "risk_factor": 0.08,
+        "risk_factor": 0.2,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -225,9 +227,9 @@
             2780.0627759999998,
             684.4440549999999
         ],
-        "zone_activity": "Carpentry",
-        "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.06,
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.08,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -254,9 +256,9 @@
             2825.703263,
             977.9338304999999
         ],
-        "zone_activity": "Bricklaying",
-        "required_PPE": "Helmet, Safety Goggles",
-        "risk_factor": 0.12,
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.2,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -284,8 +286,8 @@
             1247.0792075
         ],
         "zone_activity": "Bricklaying",
-        "required_PPE": "Helmet, Safety Goggles",
-        "risk_factor": 0.11,
+        "required_PPE": "Helmet",
+        "risk_factor": 0.19,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -312,9 +314,9 @@
             1168.2597460000002,
             1031.798432
         ],
-        "zone_activity": "Welding",
-        "required_PPE": "Helmet, Mouthguard",
-        "risk_factor": 0.11,
+        "zone_activity": "Carpentry",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.08,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -342,8 +344,8 @@
             992.4381625000001
         ],
         "zone_activity": "Welding",
-        "required_PPE": "Helmet, Safety Goggles",
-        "risk_factor": 0.19,
+        "required_PPE": "Helmet",
+        "risk_factor": 0.07,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -371,10 +373,13 @@
             1403.7529775
         ],
         "zone_activity": "Carpentry",
-        "required_PPE": "Helmet, Safety Goggles",
+        "required_PPE": "Helmet",
         "risk_factor": 0.1,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 2,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:30",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:50"
+        ]
     },
     "Orange Hall": {
         "boundary": [
@@ -399,9 +404,9 @@
             2179.8186685,
             1393.9204645
         ],
-        "zone_activity": "Bricklaying",
-        "required_PPE": "Helmet, Safety Goggles",
-        "risk_factor": 0.12,
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.11,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -428,9 +433,9 @@
             2780.0627759999998,
             1733.779102
         ],
-        "zone_activity": "Welding",
-        "required_PPE": "Helmet, Mouthguard",
-        "risk_factor": 0.09,
+        "zone_activity": "Bricklaying",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.14,
         "amount_of_hazards": 0,
         "hazard_type": []
     },
@@ -457,11 +462,14 @@
             680.52204925,
             1568.725146
         ],
-        "zone_activity": "Carpentry",
-        "required_PPE": "Helmet, Safety Shoes",
-        "risk_factor": 0.07,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "zone_activity": "Bricklaying",
+        "required_PPE": "Helmet",
+        "risk_factor": 0.11,
+        "amount_of_hazards": 2,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:07",
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:07"
+        ]
     },
     "BG.Oost.17": {
         "boundary": [
@@ -486,11 +494,14 @@
             823.2030257499999,
             1668.448409
         ],
-        "zone_activity": "Welding",
+        "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
-        "risk_factor": 0.09,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "risk_factor": 0.08,
+        "amount_of_hazards": 2,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:05",
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:06"
+        ]
     },
     "BG.Oost.18": {
         "boundary": [
@@ -515,11 +526,13 @@
             532.9862410000001,
             1524.7651449999998
         ],
-        "zone_activity": "Welding",
+        "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
-        "risk_factor": 0.15,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "risk_factor": 0.17,
+        "amount_of_hazards": 1,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:11"
+        ]
     },
     "BG.Oost.19": {
         "boundary": [
@@ -544,8 +557,8 @@
             600.822089,
             1427.70770075
         ],
-        "zone_activity": "Bricklaying",
-        "required_PPE": "Helmet, Safety Shoes",
+        "zone_activity": "Welding",
+        "required_PPE": "Helmet",
         "risk_factor": 0.12,
         "amount_of_hazards": 0,
         "hazard_type": []

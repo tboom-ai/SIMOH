@@ -25,7 +25,7 @@ class NetworkPlanner:
     def calc_schedule(self, epsilon):
         env = bd.CustomBanditzones()
         epsilon_values = [epsilon]
-        calc_schedule_optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=8)
+        calc_schedule_optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=5)
         schedule = calc_schedule_optimizer.run_simulation()
 
         def remove_exact_duplicates(lst):
