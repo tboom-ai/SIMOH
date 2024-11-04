@@ -112,9 +112,10 @@
         "zone_activity": "Welding",
         "required_PPE": "Helmet",
         "risk_factor": 0.07,
-        "amount_of_hazards": 1,
+        "amount_of_hazards": 2,
         "hazard_type": [
-            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:43"
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:43",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:36:03"
         ]
     },
     "BG.Oost.5": {
@@ -375,10 +376,13 @@
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
         "risk_factor": 0.1,
-        "amount_of_hazards": 2,
+        "amount_of_hazards": 5,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:30",
-            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:50"
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:50",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:35:58",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:36:08",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 14:42:14"
         ]
     },
     "Orange Hall": {
@@ -465,11 +469,13 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.11,
-        "amount_of_hazards": 3,
+        "amount_of_hazards": 5,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:07",
             "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:07",
-            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:20:05"
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:20:05",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:37:06",
+            "WARNING: Person without helmet detected, ID: 2, at 2024-11-04 12:37:06"
         ]
     },
     "BG.Oost.17": {
@@ -498,10 +504,13 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.08,
-        "amount_of_hazards": 2,
+        "amount_of_hazards": 5,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:05",
-            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:06"
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 11:12:06",
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-04 12:36:19",
+            "WARNING: Person without helmet detected, ID: 2, at 2024-11-04 12:37:09",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:37:09"
         ]
     },
     "BG.Oost.18": {
@@ -530,9 +539,10 @@
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
         "risk_factor": 0.17,
-        "amount_of_hazards": 1,
+        "amount_of_hazards": 2,
         "hazard_type": [
-            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:11"
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:12:11",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:37:06"
         ]
     },
     "BG.Oost.19": {
@@ -561,7 +571,9 @@
         "zone_activity": "Welding",
         "required_PPE": "Helmet",
         "risk_factor": 0.12,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 1,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:37:05"
+        ]
     }
 }

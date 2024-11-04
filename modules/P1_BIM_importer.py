@@ -8,7 +8,7 @@ import json
 settings = ifcopenshell.geom.settings()
 
 # Load the IFC file
-model = ifcopenshell.open('assets/v1.ifc') #####################
+model = ifcopenshell.open('assets/v1.ifc') 
 
 # Calculate the global transformation for a placement
 def get_global_transform(placement):
