@@ -2,9 +2,9 @@ import numpy as np
 import json
 
 def simulate_robot_path(step=5):
-    """Simulate a robot moving through zones, yielding [x, y, z] coordinates.
+    """Simulate a robot moving through zones, yielding [x, y] coordinates.
     Input: step (int): Step size for interpolation.
-    Output: list: The next point on the path [x, y, z]"""
+    Output: list: The next point on the path [x, y]"""
     
     # Open the json where the calculated path is stored and extract the dataset_points
     with open("assets/path.json", "r") as file:

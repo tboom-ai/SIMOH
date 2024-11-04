@@ -1,12 +1,7 @@
-import json
-import tkinter as tk
-from tkinter import Frame
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
-from matplotlib.lines import Line2D
-import numpy as np
-
+from matplotlib.animation import FuncAnimation
+from multiprocessing import Queue
 # Import from other scripts
 from E1_robot_path import simulate_robot_path
 from E1_hazard_detection import load_json
@@ -58,7 +53,7 @@ def plot_walls(ax, wall_coordinates, color='lightgrey', alpha=0.8):
         ax.add_patch(polygon)
 
 def plot_robot_path(ax, path, color='blue', linewidth=2, label='Robot Path'):
-    """Plot the robot path on the given and transform the y axis."""
+    """Plot the robot path on the given axis."""
 
     # Extract x and y coordinates, adjusting y to account for image coordinate inversion
     x_coords = [position[0] for position in path]
@@ -68,7 +63,7 @@ def plot_robot_path(ax, path, color='blue', linewidth=2, label='Robot Path'):
     ax.plot(x_coords, y_coords, color=color, linewidth=linewidth, label=label)
     ax.legend()  # Optional: add a legend to identify the path
 
-def main():
+def main(position_queue):
     """Main function to visualize zones and robot path."""
 
     # Path to the JSON file containing zone information
@@ -93,14 +88,27 @@ def main():
     robot_path = list(simulate_robot_path())
     plot_robot_path(ax, robot_path)
     
+    # Initialize moving dot
+    moving_dot, = ax.plot([], [], 'ro', label='Current Position') # ro = red dot
+    ax.legend()
+
     # Customize the plot
     ax.set_aspect('equal', 'box')
 
-    # Show the plot
+    def init():
+        moving_dot.set_data([], [])
+        return moving_dot,
+
+    def update(frame):
+        while not position_queue.empty():
+            current_position = position_queue.get()
+            moving_dot.set_data([current_position[0]], [current_position[1]])
+        return moving_dot,
+
+    ani = FuncAnimation(fig, update, init_func=init, blit=True, interval=50)
     plt.show()
 
-    # Destroy the plot after displaying
-    plt.close(fig)
-
 if __name__ == "__main__":
-    main()
+   position_queue = Queue()
+   main(position_queue)
+    

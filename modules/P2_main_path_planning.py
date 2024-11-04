@@ -15,9 +15,9 @@ class NetworkPlanner:
 
     def define_epsilon(self):
         env = bd.CustomBanditzones()
-        epsilon_values = [0.5, 0.4, 0.3, 0.2, 0.1]
+        epsilon_values = [0.5, 0.4, 0.3, 0.2, 0.1, 0.05]
 
-        optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=1000)
+        optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=100000)
         optimizer.run_simulation()
         self.best_epsilon = optimizer.get_best_epsilon()
         return self.best_epsilon
@@ -25,7 +25,7 @@ class NetworkPlanner:
     def calc_schedule(self, epsilon):
         env = bd.CustomBanditzones()
         epsilon_values = [epsilon]
-        calc_schedule_optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=3)
+        calc_schedule_optimizer = agent.EpsilonGreedyBandit(env, epsilon_values, n_steps=5)
         schedule = calc_schedule_optimizer.run_simulation()
 
         def remove_exact_duplicates(lst):

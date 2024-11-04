@@ -85,12 +85,12 @@ class EpsilonGreedyBandit:
         plt.show()
 
 
-# For local use
+# #For local use
 # if __name__ == "__main__":
 #     # Set up the environment and parameters
 #     env = bd.CustomBanditzones()
 #     epsilon_values = [0.3, 0.2, 0.1, 0.05]
-#     n_steps = 1000
+#     n_steps = 100000
 
 #     # Create an instance of the EpsilonGreedyBandit class
 #     bandit = EpsilonGreedyBandit(env, epsilon_values, n_steps)
