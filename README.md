@@ -6,6 +6,15 @@ This project presents a robotic solution for effective hazard detection and moni
 
 The robot utilizes Building Information Modeling (BIM) data to map and plan its route, linking construction activities to specific zones and prioritizing high-risk areas in its schedule. Through continuous data collection and live updates to the BIM model, the system provides site managers with an up-to-date overview of site conditions, enhancing overall safety. This solution minimizes the need for constant human supervision while improving the accuracy and efficiency of hazard detection.
 
+### Features
+
+- 👷‍♂️ PPE (Personal Protective Equipment) detection for workers
+- 🧱 Crack detection in structural elements
+- 🔎 Autonomous pathplanning and wayfinding 
+- 📊 Hazard logging and BIM integration 
+- 🧑‍💻 Real-time monotoring
+
+
 ## Repository structure 🏗️
 The project folder is organized as follows:
 
@@ -29,9 +38,9 @@ The project folder is organized as follows:
          - E3 Live BIM interface 
 - **test**: This folder contains some testing and training scripts which were used during developing the project. 
 
-- **main_app_PPE**: This the main script to be run to launch the App for PPE hazard detection.
+- **```main_app_PPE.py```**: This the main script to be run to launch the App for PPE hazard detection.
 
-- **main_app_cracks**: This is the main script to be run to launch App for crack detection.
+- **```main_app_cracks.py```**: This is the main script to be run to launch App for crack detection.
 
 Refer to the flowchart below for a visual representation of the different phases and their interactions:
 
@@ -41,20 +50,23 @@ This flowchart represents the project architecture of the S.I.M.O.H. system, ill
 ![Project Flowchart](flowchart.png)
 
 ### Flowchart Summary
-After launching the main_app_PPE application, the system starts the **Preparation Phase**.
+After launching the ```main_app_PPE``` application, the system starts the **Preparation Phase**:
 - **P1**: After clicking "Import BIM", an .ifc BIM file is loaded. Zone and structural data is extracted to generate a digital site plan for the robot's path. 
 - **P2**: Directly after importing the BIM, the system starts it path planning algorithms. It calculates an optimal route between zones based on factors as risk levels, previously identified hazards, and distances between zones. 
-- **P3**: After the robot's plan is finalized and the optimal plan is planned, the Unitree GO2 robot is ready to start the next phase.
+- **P3**: After the robot's plan is finalized and the optimal plan is planned, the Unitree GO2 robot is ready to start the next phase. The "Start" button can be clicked.
 
-When clicking the "Start" button, 
+When clicking "Start", the **Execution Phase** begins. The robot leaves it charging station and starts its cycle: 
+- **E1**: This part is the heart of the system code. It involves the execution of real-time operation, where the robot, simulated by a red dot, navigates its predifined path. When entering the boundary of a zone where a PPE check is required, it opens the systems webcam and starts detecting for PPE. Hazard warnings are logged to the JSON file real-time.
+- **E2**: The crack detection algorithm isn't yet integrated within ```main_app_PPE```. It is activated by launching ```main_app_cracks```. The system requests users to locate specific structural elements on a site plan and include a picture of them, which it will then analyze for cracks.
+- **E3**: The systems findings are logged directly to the ```BIM.json``` file. Clicking "Show Heatmap" reveals real-time hazard data. 
 
-More elaborate information about all algorithms can be found in the "Final Report PFD". The link to this PFD file: xxxxxxxxxx
+More elaborate information about all algorithms can be found in the "Final Report PDF". The link to this PDF file: xxxxxxxxxx
 
 ## Installation 🚀
 
 Running the code requires a few steps to take. 
 
-### Step 1: Initial setup
+### Step 1: Initial Setup
 1. **Clone the repository**
    - Clone this repository to your local system:
       ```bash
@@ -69,7 +81,7 @@ Running the code requires a few steps to take.
    - Replace ```your_venv``` with a name of your choice
 
 3. **Set the Python Interpreter Version**
-   - Ensure that the virtual environment uses a Python version between **3.8 and 3.12**. This will ensure the code is compatible with all the required packages.
+   - Ensure that the virtual environment uses a Python version between **3.8 and 3.12**. This will ensure the code is compatible with all the required packages. The latest Python version, 3.13, isn't yet compatible. 
 
 4. **Activate the Virtual Environment**
    - On **macOS/Linux**:
@@ -81,28 +93,28 @@ Running the code requires a few steps to take.
       your_venv\Scripts\activate
       ```
 
-### Step 2: Installing dependencies
-- Install all necessary packages from the 'requirements.txt' file:
+### Step 2: Installing Dependencies
+- Install all necessary packages from the 'requirements.txt' file into your virtual environment:
    ```bash
    pip install -r requirements.txt
    ```
 
-After installing all dependencies, you are al set to launch S.I.M.O.H.'s applications! 
+After installing all dependencies, you are al set to launch S.I.M.O.H.'s applications! 🚀
 
-## Usage instructions 📖
+## Usage Instructions 📖
 
 The code included two different applications. 
 ### Step 3: Running the Application
-- To start the **PPE hazard detection** application, use the following command:
+- To start the **PPE Hazard Detection** application, use the following command:
    ```bash
    python main_app_PPE.py
    ```
-- To start the **crack detection** application, use the following command:
+- To start the **Crack Detection** application, use the following command:
    ```bash   
    python main_app_cracks.py
    ```
 
-### Potential issues
+### Potential Issues ⚠️
 1. If you encounter issues regarding modules not beeing found, manually install them by running:
    ```bash
    pip install opencv-python ultralytics matplotlib screeninfo numpy ifcopenshell shapely gym networkx pillow
@@ -120,15 +132,37 @@ The code included two different applications.
       import _tkinter 
       ^^^^^^^^^^^^^^^
    ```
-   - This occasionaly happens when running the code on macOS. You can resolve the issue by installing ```tkinter``` using the following command:
-      ```bash
-      brew install python-tk
-      ```
+- This occasionaly happens when running the code on macOS. You can resolve the issue by installing ```tkinter``` using the following command:
+   ```bash
+   brew install python-tk
+   ```
 
-3. Make sure 
+### Step 4: Running ```main_app_PPE```
+
+The instructions for running this Application are very straightforward. Pay attention to the terminal prompts, since everything expected of the user is detailed there. 
+
+1. Click "Import BIM" button. The first section of the full path will start planning, which may take some time. Eventually, a window pops up showing the smoothed path. Continue closing the windows until the terminal confirms that the full path has been planned. 
+
+*Note: If the planning of a path section takes significant time (>2 minutes), use a keyboard interrupt by pressing **Control + C**. Afterwards, click "Import BIM" again.* 
+
+2. Press "Start" button. Robot path will be animated and the systems webcam will launch. Sit back untill the script finishes. 
+
+3. Press the "Show Heatmap" button to reveal real-time hazard data. Click on a zone's black dot to display detailed hazard data for that specific zone.
+
+
+### Step 5: Running ```main_app_cracks```
 
 
 
 
-## Acknowledgements 🤩😘
+## Acknowledgements 🤩
 
+We would like to thank everyone who contributed to this project:
+
+- **Databases Used**:
+   - **[Safety Helmet Detection]**: Used for training the YOLOv8 model ```best_helmet.pt``` on PPE detection. Available on [Kaggle](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection/data)
+   - **[Crack Computer Vision Project]**: Used for training the YOLOv8 model ```best_cracks.pt``` on cracks. Available on [Roboflow](https://universe.roboflow.com/university-bswxt/crack-bphdr?ref=ultralytics)
+
+- **Special Thanks**:
+   - **Abdullah Alattas**: For providing us with the BIM ```BK.ifc``` of BK City, the Faculty of Architecture and the Built Environment. 
+   - **Prateek Bhustali**: For his guidance on integrating the multi-armed bandit and RRT* algorithms for enhanced pathplanning. Also, many thanks for fixing our GitHub repository in times of hopelessness. 🤝
