@@ -1,6 +1,8 @@
 import tkinter as tk  # Used to create GUI components (buttons, listboxes, menus, entries, labels)
 import modules.E2_structural_element_loader as SEL  # Load E2_structural_element_loader.py script
 import subprocess  # To run external Python scripts
+import os
+import sys 
 
 # Custom button class with rounded edges
 class RoundedButton(tk.Canvas):
@@ -107,7 +109,7 @@ class RobotApp:
         Opens the E2_crack_dashboard.py file to display the analysis dashboard.
         """
         try:
-            subprocess.Popen(["python", "modules/E2_crack_dashboard.py"])
+            subprocess.Popen([sys.executable, os.path.join("modules", "E2_crack_dashboard.py")])
             print("Dashboard opened successfully!")
         except Exception as e:
             print(f"Error opening dashboard: {e}")
@@ -124,7 +126,7 @@ class RobotApp:
         Starts the crack detection by running the E2_crack_detection.py script.
         """
         try:
-            subprocess.Popen(["python", "modules/E2_crack_detection.py"])
+            subprocess.Popen([sys.executable, os.path.join("modules", "E2_crack_detection.py")])
             print("Detection started successfully!")
         except Exception as e:
             print(f"Error starting detection: {e}")

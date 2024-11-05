@@ -57,15 +57,15 @@ Running the code requires a few steps to take.
 ### Step 1: Initial setup
 1. **Clone the repository**
    - Clone this repository to your local system:
-   ```bash
-   git clone https://github.com/tboom-ai/SIMOH.
-   ```
+      ```bash
+      git clone https://github.com/tboom-ai/SIMOH.
+      ```
 
 2. **Create a Virtual Environment**
    - Creating a new virtual environment is optional but strongly advised:
-   ```bash
-   python -m venv your_venv
-   ```
+      ```bash
+      python -m venv your_venv
+      ```
    - Replace ```your_venv``` with a name of your choice
 
 3. **Set the Python Interpreter Version**
@@ -73,19 +73,19 @@ Running the code requires a few steps to take.
 
 4. **Activate the Virtual Environment**
    - On **macOS/Linux**:
-   ```bash
-   source your_venv/bin/activate
-   ```
+      ```bash
+      source your_venv/bin/activate
+      ```
    - On **Windows**:
-   ```bash
-   your_venv\Scripts\activate
-   ```
+      ```bash
+      your_venv\Scripts\activate
+      ```
 
 ### Step 2: Installing dependencies
 - Install all necessary packages from the 'requirements.txt' file:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 After installing all dependencies, you are al set to launch S.I.M.O.H.'s applications! 
 
@@ -102,8 +102,15 @@ The code included two different applications.
    python main_app_cracks.py
    ```
 
-### Potential issue
-- If you encounter the following error, your Python may not be configured for ```tkinter```. 
+### Potential issues
+1. If you encounter issues regarding modules not beeing found, manually install them by running:
+   ```bash
+   pip install opencv-python ultralytics matplotlib screeninfo numpy ifcopenshell shapely gym networkx pillow
+   ```
+
+
+
+2. If you encounter the following error, your Python may not be configured for ```tkinter```. 
    ```zsh
    ➜  SIMOH git:(main) ✗ python main_app_PPE.py
    Traceback (most recent call last):
@@ -113,11 +120,12 @@ The code included two different applications.
       import _tkinter 
       ^^^^^^^^^^^^^^^
    ```
-- This occasionaly happens when running the code on macOS. You can resolve the issue by installing ```tkinter``` using the following command:
-   ```bash
-   brew install python-tk
-   ```
+   - This occasionaly happens when running the code on macOS. You can resolve the issue by installing ```tkinter``` using the following command:
+      ```bash
+      brew install python-tk
+      ```
 
+3. Make sure 
 
 
 
