@@ -17,19 +17,23 @@ while True:
         print("Error: Failed to grab frame")
         break
 
-    # YOLO detection and tracking
+    # Mirror the frame for display
+    mirrored_frame = cv2.flip(frame, 1)
+
+    # YOLO detection and tracking on the mirrored frame
     results = model.track(
-        source=frame,
+        source=mirrored_frame,
         conf=0.6,
         persist=True,
         save=False,
-        tracker='assets/bytetrack_helmet.yaml', # optimized tracking
+        tracker='assets/bytetrack_helmet.yaml',  # optimized tracking
         verbose=False
     )
 
+    # Draw detections without flipping them back
     annotated_frame = results[0].plot()
 
-    # Show the frame with detections
+    # Show the mirrored frame with annotations
     cv2.imshow('Helmet Check', annotated_frame)
 
     # Press 'q' to exit the loop
