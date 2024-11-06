@@ -141,7 +141,7 @@ The code included two different applications.
 
 The instructions for running this Application are very straightforward. Pay attention to the terminal prompts, since everything expected of the user is detailed there. 
 
-1. Click "Import BIM" button. The first section of the full path will start planning, which may take some time. Eventually, a window pops up showing the smoothed path. Continue closing the windows until the terminal confirms that the full path has been planned. 
+1. After GUI window opens, click "Import BIM" button. The first section of the full path will start planning, which may take some time. Eventually, a window pops up showing the smoothed path. Continue closing the windows until the terminal confirms that the full path has been planned. 
 
 *Note: If the planning of a path section takes significant time (>2 minutes), use a keyboard interrupt by pressing **Control + C**. Afterwards, click "Import BIM" again.* 
 
@@ -149,19 +149,34 @@ The instructions for running this Application are very straightforward. Pay atte
 
 3. Press the "Show Heatmap" button to reveal real-time hazard data. Click on a zone's black dot to display detailed hazard data for that specific zone.
 
+A demonstration video of running the Application is added xxxxxxxxxxxxx
 
 ### Step 5: Running ```main_app_cracks```
 
+1. Once the GUI window opens, click on "Structural Element Information" to load a construction plan. For easy use, ```asssets/construction_site_bk.jpg``` is recommended. 
 
+2. Select an area on the plan to mark its coordiantes and add a structural element ID. Standardized examples are given in the dropdown menu.
 
+3. Click "Submit Element Details" to save the information.
+
+4. Repeat until all desired structural element ID's are localized and filled in.
+
+5. Click "Start Crack Detection" to load an image of the structural element and initiate crack detection using the trained YOLO model ```assets/best_cracks.pt```. Examples of images are included in the folder ```assets/crack_nocrack_images```. If cracks are detected, the bounding box, crack length, widht, and orientation will be logged in ```assets/crack_information.json```.
+
+6. After detection, click "Dashboard" to review the crack data visually.
+
+A demonstration video of running the Application is added xxxxxxxxxxxxx
 
 ## Acknowledgements 🤩
 
 We would like to thank everyone who contributed to this project:
 
 - **Databases Used**:
-   - **[Safety Helmet Detection]**: Used for training the YOLOv8 model ```best_helmet.pt``` on PPE detection. Available on [Kaggle](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection/data)
-   - **[Crack Computer Vision Project]**: Used for training the YOLOv8 model ```best_cracks.pt``` on cracks. Available on [Roboflow](https://universe.roboflow.com/university-bswxt/crack-bphdr?ref=ultralytics)
+   - **Safety Helmet Detection**: Used for training the YOLOv8 model ```best_helmet.pt``` on PPE detection. Available on [Kaggle](https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection/data)
+   - **Crack Computer Vision Project**: Used for training the YOLOv8 model ```best_cracks.pt``` on cracks. Available on [Roboflow](https://universe.roboflow.com/university-bswxt/crack-bphdr?ref=ultralytics)
+
+- **Sample Code Used**:
+   - **AtsushiSakai(@Atsushi_twi)**: Modified the Path planning Sample Code with Rapidly-Exploring Random Trees (RRT).
 
 - **Special Thanks**:
    - **Abdullah Alattas**: For providing us with the BIM ```BK.ifc``` of BK City, the Faculty of Architecture and the Built Environment. 

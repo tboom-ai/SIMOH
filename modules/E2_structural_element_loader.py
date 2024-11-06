@@ -60,11 +60,11 @@ class ZoneApp:
         self.submit_delete_frame.grid(row=10, column=0, pady=10)
 
         # Submit button
-        self.submit_button = tk.Button(self.submit_delete_frame, text="Submit Zone Details", command=self.submit_details, bg="white", bd=0.5, highlightbackground="gray")
+        self.submit_button = tk.Button(self.submit_delete_frame, text="Submit Element Details", command=self.submit_details, bg="white", bd=0.5, highlightbackground="gray")
         self.submit_button.grid(row=0, column=1, padx=6, sticky="e")
 
         # Delete button
-        self.delete_button = tk.Button(self.submit_delete_frame, text="Delete Zone Details", command=self.delete_zone, bg="white", bd=0.5, highlightbackground="gray")
+        self.delete_button = tk.Button(self.submit_delete_frame, text="Delete Element Details", command=self.delete_zone, bg="white", bd=0.5, highlightbackground="gray")
         self.delete_button.grid(row=0, column=0, padx=5, sticky="w")
 
         # Load existing data from JSON file

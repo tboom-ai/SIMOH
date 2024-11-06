@@ -112,10 +112,13 @@
         "zone_activity": "Welding",
         "required_PPE": "Helmet",
         "risk_factor": 0.07,
-        "amount_of_hazards": 0,
+        "amount_of_hazards": 3,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 11:11:43",
-            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:36:03"
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-04 12:36:03",
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-06 11:53:42",
+            "WARNING: Person without helmet detected, ID: 6, at 2024-11-06 11:53:42",
+            "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:53:47"
         ]
     },
     "BG.Oost.5": {
@@ -295,8 +298,13 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.19,
-        "amount_of_hazards": 1,
-        "hazard_type": []
+        "amount_of_hazards": 5,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 17, at 2024-11-06 11:54:20",
+            "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:54:20",
+            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:54:22",
+            "WARNING: Person without helmet detected, ID: 8, at 2024-11-06 11:54:23"
+        ]
     },
     "BG.Oost.11": {
         "boundary": [
@@ -382,8 +390,17 @@
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
         "risk_factor": 0.1,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 8,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-06 11:53:48",
+            "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:53:48",
+            "WARNING: Person without helmet detected, ID: 8, at 2024-11-06 11:53:48",
+            "WARNING: Person without helmet detected, ID: 2, at 2024-11-06 11:53:53",
+            "WARNING: Person without helmet detected, ID: 10, at 2024-11-06 11:53:56",
+            "WARNING: Person without helmet detected, ID: 5, at 2024-11-06 11:53:57",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-06 11:53:59",
+            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:53:59"
+        ]
     },
     "Orange Hall": {
         "boundary": [
@@ -411,8 +428,22 @@
         "zone_activity": "Welding",
         "required_PPE": "Helmet",
         "risk_factor": 0.11,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 13,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 2, at 2024-11-06 11:53:36",
+            "WARNING: Person without helmet detected, ID: 3, at 2024-11-06 11:53:37",
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-06 11:53:39",
+            "WARNING: Person without helmet detected, ID: 2, at 2024-11-06 11:54:02",
+            "WARNING: Person without helmet detected, ID: 8, at 2024-11-06 11:54:02",
+            "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:54:02",
+            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:54:02",
+            "WARNING: Person without helmet detected, ID: 10, at 2024-11-06 11:54:06",
+            "WARNING: Person without helmet detected, ID: 13, at 2024-11-06 11:54:07",
+            "WARNING: Person without helmet detected, ID: 14, at 2024-11-06 11:54:08",
+            "WARNING: Person without helmet detected, ID: 15, at 2024-11-06 11:54:10",
+            "WARNING: Person without helmet detected, ID: 9, at 2024-11-06 11:54:13",
+            "WARNING: Person without helmet detected, ID: 16, at 2024-11-06 11:54:16"
+        ]
     },
     "BG.Oost.15": {
         "boundary": [
@@ -440,8 +471,14 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.14,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 5,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 16, at 2024-11-06 11:54:19",
+            "WARNING: Person without helmet detected, ID: 8, at 2024-11-06 11:54:25",
+            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:54:25",
+            "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:54:25",
+            "WARNING: Person without helmet detected, ID: 10, at 2024-11-06 11:54:28"
+        ]
     },
     "Bouwpub": {
         "boundary": [
