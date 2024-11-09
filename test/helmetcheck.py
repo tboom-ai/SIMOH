@@ -4,6 +4,7 @@ import numpy as np
 
 # Load trained YOLO model
 model = YOLO('assets/best_helmet.pt')  # Path to the trained model
+# model = YOLO('assets/best_cracks.pt')
 
 # Initialize the camera
 cap = cv2.VideoCapture(0)  # try (0) for main webcam computer, (1) for external webcam, or other way around
@@ -30,7 +31,7 @@ while True:
         verbose=False
     )
 
-    # Draw detections without flipping them back
+    # Draw detections without flipping them backq
     annotated_frame = results[0].plot()
 
     # Show the mirrored frame with annotations
