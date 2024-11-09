@@ -36,7 +36,7 @@ The project folder is organized as follows:
          - E1.3 Digital Visualization of the path
          - E2 Crack Detection
          - E3 Live BIM interface 
-- **test**: This folder contains some testing and training scripts which were used during developing the project. 
+- **test**: This folder contains some testing, data preprocessing and yolo-model training scripts which were used during developing the project. 
 
 - **```main_app_PPE.py```**: This the main script to be run to launch the App for PPE hazard detection.
 
@@ -60,7 +60,7 @@ When clicking "Start", the **Execution Phase** begins. The robot leaves it charg
 - **E2**: The crack detection algorithm isn't yet integrated within ```main_app_PPE```. It is activated by launching ```main_app_cracks```. The system requests users to locate specific structural elements on a site plan and include a picture of them, which it will then analyze for cracks.
 - **E3**: The systems findings are logged directly to the ```BIM.json``` file. Clicking "Show Heatmap" reveals real-time hazard data. 
 
-More elaborate information about all algorithms can be found in the "Final Report PDF". The link to this PDF file: xxxxxxxxxx
+More elaborate information about all algorithms can be found in the "Final Report PDF". Find flowcharts of all different scripts in the reports appendix. The link to this PDF file: xxxxxxxxxx
 
 ## Installation 🚀
 
@@ -121,7 +121,6 @@ The code included two different applications.
    ```
 
 
-
 2. If you encounter the following error, your Python may not be configured for ```tkinter```. 
    ```zsh
    ➜  SIMOH git:(main) ✗ python main_app_PPE.py
@@ -143,13 +142,14 @@ The instructions for running this Application are very straightforward. Pay atte
 
 1. After GUI window opens, click "Import BIM" button. The first section of the full path will start planning, which may take some time. Eventually, a window pops up showing the smoothed path. Continue closing the windows until the terminal confirms that the full path has been planned. 
 
-*Note: If the planning of a path section takes significant time (>2 minutes), use a keyboard interrupt by pressing **Control + C**. Afterwards, click "Import BIM" again.* 
+*Note: If the planning of a path section takes significant time (>2 minutes), use a keyboard interrupt by pressing **Control + C**. The RRT* Afterwards, click "Import BIM" again.* 
 
 2. Press "Start" button. Robot path will be animated and the systems webcam will launch. Sit back untill the script finishes. 
 
 3. Press the "Show Heatmap" button to reveal real-time hazard data. Click on a zone's black dot to display detailed hazard data for that specific zone.
 
-A demonstration video of running the Application is added xxxxxxxxxxxxx
+A demonstration video of running the PPE Application is added: [Watch the video](https://youtu.be/fhmrxN6jcRY)
+
 
 ### Step 5: Running ```main_app_cracks```
 
@@ -161,11 +161,12 @@ A demonstration video of running the Application is added xxxxxxxxxxxxx
 
 4. Repeat until all desired structural element ID's are localized and filled in.
 
-5. Click "Start Crack Detection" to load an image of the structural element and initiate crack detection using the trained YOLO model ```assets/best_cracks.pt```. Examples of images are included in the folder ```assets/crack_nocrack_images```. If cracks are detected, the bounding box, crack length, widht, and orientation will be logged in ```assets/crack_information.json```.
+5. Click "Start Crack Detection" to load an image of the structural element and start crack detection using the trained YOLO model ```assets/best_cracks.pt```. Examples of images are included in the folder ```assets/crack_nocrack_images```. If cracks are detected, the bounding box, crack length, crack widht, and orientation will be logged in ```assets/crack_information.json```.
 
 6. After detection, click "Dashboard" to review the crack data visually.
 
-A demonstration video of running the Application is added xxxxxxxxxxxxx
+A demonstration video of running the Crack Application is added: [Watch the video](https://youtu.be/J7-leZvpbxo)
+
 
 ## Acknowledgements 🤩
 
@@ -176,8 +177,10 @@ We would like to thank everyone who contributed to this project:
    - **Crack Computer Vision Project**: Used for training the YOLOv8 model ```best_cracks.pt``` on cracks. Available on [Roboflow](https://universe.roboflow.com/university-bswxt/crack-bphdr?ref=ultralytics)
 
 - **Sample Code Used**:
-   - **AtsushiSakai(@Atsushi_twi)**: Modified the Path planning Sample Code with Rapidly-Exploring Random Trees (RRT).
+   - **AtsushiSakai(@Atsushi_twi)**: Used and modified the Path planning Sample Code with Rapidly-Exploring Random Trees (RRT).
 
 - **Special Thanks**:
    - **Abdullah Alattas**: For providing us with the BIM ```BK.ifc``` of BK City, the Faculty of Architecture and the Built Environment. 
    - **Prateek Bhustali**: For his guidance on integrating the multi-armed bandit and RRT* algorithms for enhanced pathplanning. Also, many thanks for fixing our GitHub repository in times of hopelessness. 🤝
+   - **Puck, Jamal and Leandre**: For all programming guidance during the CORE course. 
+
