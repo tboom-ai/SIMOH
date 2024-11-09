@@ -60,7 +60,9 @@ When clicking "Start", the **Execution Phase** begins. The robot leaves it charg
 - **E2**: The crack detection algorithm isn't yet integrated within ```main_app_PPE```. It is activated by launching ```main_app_cracks```. The system requests users to locate specific structural elements on a site plan and include a picture of them, which it will then analyze for cracks.
 - **E3**: The systems findings are logged directly to the ```BIM.json``` file. Clicking "Show Heatmap" reveals real-time hazard data. 
 
-More elaborate information about all algorithms can be found in the "Final Report PDF". Find flowcharts of all different scripts in the reports appendix. The link to this PDF file: xxxxxxxxxx
+More elaborate information about all algorithms can be found in the [Final Report PDF](https://drive.google.com/file/d/1uHUJqwhFYTeoy_h4LXJxJS2DE1TVu44d/view?usp=sharing). Find flowcharts of all different scripts in the reports appendix. 
+
+For a full overview of the real-life implementation of the project, check out the [Project Video](https://youtu.be/NImUycuqH1E)
 
 ## Installation 🚀
 
