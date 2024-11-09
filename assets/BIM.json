@@ -390,7 +390,7 @@
         "zone_activity": "Carpentry",
         "required_PPE": "Helmet",
         "risk_factor": 0.1,
-        "amount_of_hazards": 8,
+        "amount_of_hazards": 12,
         "hazard_type": [
             "WARNING: Person without helmet detected, ID: 3, at 2024-11-06 11:53:48",
             "WARNING: Person without helmet detected, ID: 7, at 2024-11-06 11:53:48",
@@ -399,7 +399,11 @@
             "WARNING: Person without helmet detected, ID: 10, at 2024-11-06 11:53:56",
             "WARNING: Person without helmet detected, ID: 5, at 2024-11-06 11:53:57",
             "WARNING: Person without helmet detected, ID: 1, at 2024-11-06 11:53:59",
-            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:53:59"
+            "WARNING: Person without helmet detected, ID: 11, at 2024-11-06 11:53:59",
+            "WARNING: Person without helmet detected, ID: 1, at 2024-11-09 17:39:05",
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-09 17:39:06",
+            "WARNING: Person without helmet detected, ID: 6, at 2024-11-09 17:39:08",
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-09 17:39:18"
         ]
     },
     "Orange Hall": {
@@ -506,8 +510,10 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.11,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 1,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-09 17:39:12"
+        ]
     },
     "BG.Oost.17": {
         "boundary": [
@@ -535,8 +541,11 @@
         "zone_activity": "Bricklaying",
         "required_PPE": "Helmet",
         "risk_factor": 0.08,
-        "amount_of_hazards": 0,
-        "hazard_type": []
+        "amount_of_hazards": 2,
+        "hazard_type": [
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-09 17:39:11",
+            "WARNING: Person without helmet detected, ID: 4, at 2024-11-09 17:39:15"
+        ]
     },
     "BG.Oost.18": {
         "boundary": [
