@@ -1,0 +1,10 @@
+train: C:/Users/tombo/Documents/BT MSc/Msc3/Safetybot/data_helmetheadperson/images/train
+val: C:/Users/tombo/Documents/BT MSc/Msc3/Safetybot/data_helmetheadperson/images/val
+test: C:/Users/tombo/Documents/BT MSc/Msc3/Safetybot/data_helmetheadperson/images/test
+
+nc: 2  # Number of classes
+names: # List of class names
+  [ 
+    'helmet', 
+    'no_helmet' 
+  ]

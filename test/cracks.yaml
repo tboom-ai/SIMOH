@@ -1,0 +1,6 @@
+train: C:\Users\tombo\Documents\BT MSc\Msc3\Safetybot\cracks\train\images
+val: C:\Users\tombo\Documents\BT MSc\Msc3\Safetybot\cracks\valid\images
+test: C:\Users\tombo\Documents\BT MSc\Msc3\Safetybot\cracks\test\images
+
+names: 
+  0: crack

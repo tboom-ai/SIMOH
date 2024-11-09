@@ -5,7 +5,7 @@ model = YOLO('yolov8s.pt')
 
 # Train the model
 results = model.train(
-    data='/Users/tombo/Documents/CORE/Safetybot/helmet.yaml',
+    data='/Users/tombo/Documents/CORE/Safetybot/helmet_nohelmet.yaml',
     epochs=50,  # Adjust based on the dataset size and complexity
     imgsz=640,  # Image size for training 
     batch=16,  # Batch size
